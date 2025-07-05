@@ -1,12 +1,44 @@
-# React + Vite
+# React FakeStore App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React e-commerce application using the [Fake Store API](https://fakestoreapi.com/).  
+Built with React, React Router, Axios, and Bootstrap.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- View list of products  
+- View product details  
+- Add new products  
+- Delete products  
+- (Edit products - coming soon)  
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+
+   ```bash
+   git clone git@github.com:hrudhayg/React-FakeStore.git
+   cd React-FakeStore
+
+## Install dependencies:
+
+npm install
+
+## Project Structure
+src/
+components/ — reusable components (e.g. Navbar)
+pages/ — main pages (Home, Products, ProductDetails, AddProduct)
+App.jsx — main app with routes
+main.jsx — app entry point
+
+## Technologies Used
+React 18
+React Router v6
+Axios
+Bootstrap 5
+Vite
+
+## API
+Using the free Fake Store API for product data.
+
+## License
+MIT License © 2025
