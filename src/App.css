@@ -1,42 +1,115 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* App.css - Custom styles to enhance the React FakeStore app */
+
+/* Smooth hover transition for buttons and clickable cards */
+button,
+a.btn,
+.product-card {
+  transition: all 0.3s ease;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Product card styling */
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.product-card:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+}
+
+/* Buttons hover */
+button.btn-primary:hover,
+a.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+/* Navbar link hover */
+.navbar-nav .nav-link:hover {
+  color: #0d6efd; /* Bootstrap primary color */
+  text-decoration: underline;
+}
+
+/* Product image styling */
+.product-card img {
+  max-height: 200px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  align-self: center;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .product-card {
+    margin-bottom: 1rem;
   }
+}
+
+/* Fade-in animation when products load */
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Center loading and error messages */
+.loading,
+.error-message {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #555;
 }
 
-.card {
-  padding: 2em;
+/* Form input styling for AddProduct page */
+form input,
+form textarea,
+form select {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.read-the-docs {
-  color: #888;
+form input:focus,
+form textarea:focus,
+form select:focus {
+  outline: none;
+  border-color: #0d6efd;
+  box-shadow: 0 0 5px rgba(13, 110, 253, 0.5);
+}
+
+/* Submit button styling */
+form button[type="submit"] {
+  background-color: #0d6efd;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0b5ed7;
+}
+
+/* Add some spacing for page containers */
+.page-container {
+  padding: 2rem;
 }

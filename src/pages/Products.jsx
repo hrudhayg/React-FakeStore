@@ -29,9 +29,9 @@ function Products() {
   return (
     <Container>
       <h2 className="mb-4 text-center">Available Products</h2>
-      <Row xs={1} sm={2} md={3} lg={6} className="g-4">
+      <Row xs={1} sm={2} md={3} lg={4} className="g-4">
         {products.map((product) => (
-          <Col key={product.id}>
+          <Col key={product.id} className="product-card fade-in">
             <ProductCard product={product} />
           </Col>
         ))}
